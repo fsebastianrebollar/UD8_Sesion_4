@@ -1,0 +1,31 @@
+<%- include('assets/header') %> 
+<%- include('assets/navbar') %> 
+<div class="container">
+    <div class="row text-center mx-auto w-50pxr text-white" style="height: 300px;  width: 60%;">
+        <h1 style="font-size: 60px; margin-top: 50px; ">El tiempo</h1>
+        <p clas="margin-bottom: 50px;">La predicción en tu ciudad.</p>
+    </div>
+    <div class="row">
+        <div class="w-50 container text-center" style="background-color: rgb(200, 200, 200);border-radius: 10px;">
+            <div class="row">
+                <b style="margin-top: 15px;">Tiempo Actual</b><p><%= weather_data.weather %></p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <b>Temp Max</b><p><%= weather_data.temp_max %>ºC</p>
+                </div>
+                <div class="col">
+                    <b>Temp Actual</b><p><%= weather_data.temp %>ºC</p>
+                </div>
+                <div class="col">
+                    <b>Temp Min</b><p><%= weather_data.temp_min %>ºC</p>
+                </div>
+            </div>
+            <div class="row">
+                <b>Humedad</b><p><%= weather_data.humidity %>%</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<%- include('assets/footer') %> 

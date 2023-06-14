@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg text-bg-dark">
+  <div class="container-fluid ">
+    <a class="navbar-brand text-white" href="/">ONTinfo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active  text-white" aria-current="page" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" href="/weather">El tiempo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" href="/comments">Comentarios</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <% if(user_email!=undefined){ %>
+          <a role="button" class="btn btn-info m-1" href="/logout" style="border-color: rgb(242, 101, 0); background-color: rgb(242, 101, 0);">Cerrar Sesión</a>
+        <% } else{ %>
+          <a role="button" class="btn btn-info m-1" href="/login" style="border-color: rgb(242, 101, 0); color: rgb(242, 101, 0); background-color: transparent;">Inicia Sesión</a>
+          <a role="button" class="btn btn-info m-1" href="/register" style="border-color: rgb(242, 101, 0); background-color: rgb(242, 101, 0);">Regístrate</a>
+        <% } %>
+        
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,51 @@
+<%- include('assets/header') %> 
+<%- include('assets/navbar') %> 
+<div class="container">
+    <div class="row text-center mx-auto w-50pxr text-white" style="height: 300px;  width: 60%;">
+        <h1 style="font-size: 60px; margin-top: 50px; ">Comentarios</h1>
+        <p clas="margin-bottom: 50px;">¡Los comentarios de tus vecinos están aquí!</p>
+    </div>
+    <% if(user_email!=undefined){ %>
+        <div class="row container w-50 mx-auto" style="background-color: rgb(160, 210, 90); border-radius: 20px; padding-top: 20px;margin-bottom: 20px;">
+            <form action="http://localhost:3000/comments" method="post" enctype="application/x-www-form-urlencoded" credentials="same-origin"">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextare1" class="form-label">Email</label>
+                    <input id="exampleFormControlTextare1" class="form-control"  name="email" style="margin-bottom: 0;" type="text" id="country" name="country" value="<%=user_email %>" readonly><br>
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentar</label>
+                    <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top:10px; margin-bottom: 20px;">Commentar</button>
+        </form>
+    <% } else{ %>
+        <div class="row text-center mx-auto w-50px" style="margin-bottom: 50px;" >
+            <b style="color:yellow">Inicia sesión para poder comentar.</b>
+        </div>
+    <% } %>
+    </div>
+    <div class="row">
+        <div class="container">
+            <% for(var i=0; i < comments.length; i++) { %>
+                <% if(user_email!=comments[i].user_email){ %>
+                    <div class="row">
+                        <div class="column col-lg-2"></div>
+                        <div class="column col-lg-6" style="background-color: rgb(237, 237, 237); margin-bottom: 20px;margin-left: 20px; border-radius: 20px;">
+                            <p style="margin-bottom: 5px;margin-top: 5px;margin-left: 10px;"><%= comments[i].user_email %></p>
+                            <b style="font-size: 20px; margin-bottom: 10px; margin-left: 20px;"><%= comments[i].comment %></b>
+                        </div>
+                    </div>
+                <% } else{ %>
+                    <div class="row">
+                        <div class="column col-lg-4"></div>
+                        <div class="column col-lg-5" style="background-color: rgb(160, 210, 90); margin-bottom: 20px;margin-left: 20px; border-radius: 20px;">
+                            <p style="margin-bottom: 5px;margin-top: 5px;margin-left: 10px;"><%= comments[i].user_email %></p>
+                            <b style="font-size: 20px; margin-bottom: 10px; margin-left: 20px;"><%= comments[i].comment %></b>
+                        </div>
+                    </div>
+                <% } %>
+             <% } %>
+           
+
+        </div>
+    </div>
+</div>
+<%- include('assets/footer') %> 

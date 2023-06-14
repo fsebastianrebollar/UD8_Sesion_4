@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "c99a04f3-a6d2-4bd7-87ed-a575d282f29f",
+		"name": "Sesión_3/4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13405168"
+	},
+	"item": [
+		{
+			"name": "OpenWeatherMap",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/forecast?lat=38.84&lon=-0.60&appid=b7d03ede3b0318765e1f3ecb51ec8068",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "38.84"
+						},
+						{
+							"key": "lon",
+							"value": "-0.60"
+						},
+						{
+							"key": "appid",
+							"value": "b7d03ede3b0318765e1f3ecb51ec8068"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

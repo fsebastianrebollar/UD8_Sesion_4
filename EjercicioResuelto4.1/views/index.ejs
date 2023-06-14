@@ -1,0 +1,42 @@
+<%- include('assets/header') %> 
+<%- include('assets/navbar') %> 
+<div class="container">
+    <div class="row text-center mx-auto w-50pxr text-white" style="height: 300px;  width: 60%;">
+        <h1 style="font-size: 60px; margin-top: 50px; ">Bienvenido a la página de información de Ontinyent</h1>
+        <p clas="margin-bottom: 50px;">Aquí encontrarás toda la información sobre tu ciudad.</p>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card text-bg-dark" style="width: 18rem;">
+                <img src="./images/gente.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Ayuntamiento</h5>
+                  <p class="card-text">Visita la web del ayuntamiento para tener aún más informaicón.</p>
+                  <a href="https://www.ontinyent.es/va" class="btn btn-primary">Ir al ayuntamiento</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-bg-dark" style="width: 18rem;">
+                <img src="./images/clima.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">El tiempo</h5>
+                  <p class="card-text">Aquí encontraras el tiempo en directo de la ciudad.</p>
+                  <a href="/weather" class="btn btn-primary">Ir al tiempo</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-bg-dark" style="width: 18rem;">
+                <img src="./images/vecinos.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Comentarios</h5>
+                  <p class="card-text">Accede a los comentarios hechos por tus vecinos de la ciudad.</p>
+                  <a href="/comments" class="btn btn-primary">Ir a comentarios</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<%- include('assets/footer') %> 
